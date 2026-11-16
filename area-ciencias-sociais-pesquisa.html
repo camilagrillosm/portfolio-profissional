@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Gochi+Hand&family=IBM+Plex+Sans:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=Red+Hat+Display:ital,wght@1,400&family=Sacramento&display=swap">
-  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/style.css?v=5">
 </head>
 <body>
   <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
@@ -28,39 +28,26 @@
     <a class="voltar secundario" href="projetos.html">todas as áreas</a>
   </div>
 
-  <main class="area rosa">
-    <span class="estrela rosa" style="--t:min(18vw, 240px);--tm:90px;--r:-8deg;left:-6vw;top:8%" aria-hidden="true"></span>
-    <span class="estrela rosa-claro" style="--t:min(9vw, 120px);--tm:55px;--r:12deg;right:3vw;top:4%" aria-hidden="true"></span>
-    <span class="estrela lima" style="--t:min(14vw, 190px);--tm:75px;--r:18deg;right:-5vw;bottom:6%" aria-hidden="true"></span>
+  <main class="area">
     <div class="area-cabecalho">
-      <p class="area-rotulo">área de atuação</p>
-      <h1 class="area-titulo"><span>Ciências Sociais & Pesquisa Científica</span></h1>
-      <p class="area-intro">Texto de exemplo: uma breve apresentação desta área e de como ela aparece no meu trabalho.</p>
+      <h1 class="area-titulo">
+        <span class="em">Projetos em…<span class="estrela rosa" aria-hidden="true"></span><span class="estrela lima" aria-hidden="true"></span></span>
+        <span class="nome">ciências sociais &amp; pesquisa científica</span>
+      </h1>
+      <p class="instrucao">Clique no card para acessar o projeto desejado!</p>
     </div>
 
-    <!-- Projetos desta área: copie um bloco <li> para cada novo projeto -->
-    <ul class="lista-projetos">
-      <li>
-        <article class="projeto">
-          <span class="tag">ciências sociais & pesquisa científica</span>
-          <h2>Projeto de exemplo 1</h2>
-          <p>Breve descrição do projeto: objetivo, o que foi feito e o resultado.</p>
-        </article>
-      </li>
-      <li>
-        <article class="projeto">
-          <span class="tag">ciências sociais & pesquisa científica</span>
-          <h2>Projeto de exemplo 2</h2>
-          <p>Breve descrição do projeto: objetivo, o que foi feito e o resultado.</p>
-        </article>
-      </li>
-      <li>
-        <article class="projeto">
-          <span class="tag">ciências sociais & pesquisa científica</span>
-          <h2>Projeto de exemplo 3</h2>
-          <p>Breve descrição do projeto: objetivo, o que foi feito e o resultado.</p>
-        </article>
-      </li>
+    <!-- Cards dos projetos: 4 por linha. Para um novo projeto, copie um <li>.
+         Quando a página do projeto existir, troque href="#" pelo endereço dela. -->
+    <ul class="cards-projetos">
+      <li><a class="card-projeto" href="#" aria-disabled="true">título do<br>projeto 1</a></li>
+      <li><a class="card-projeto" href="#" aria-disabled="true">título do<br>projeto 2</a></li>
+      <li><a class="card-projeto" href="#" aria-disabled="true">título do<br>projeto 3</a></li>
+      <li><a class="card-projeto" href="#" aria-disabled="true">título do<br>projeto 4</a></li>
+      <li><a class="card-projeto" href="#" aria-disabled="true">título do<br>projeto 5</a></li>
+      <li><a class="card-projeto" href="#" aria-disabled="true">título do<br>projeto 6</a></li>
+      <li><a class="card-projeto" href="#" aria-disabled="true">título do<br>projeto 7</a></li>
+      <li><a class="card-projeto" href="#" aria-disabled="true">título do<br>projeto 8</a></li>
     </ul>
   </main>
 
@@ -75,5 +62,11 @@
     <p class="aviso-rodape">Os conteúdos aqui presentes são de autoria de Camila Grillo Schiavetto Marques, e o plágio, assim como o uso indevido dos mesmos não é permitido.</p>
   </footer>
 
+  <script>
+    // Cards ainda sem página de projeto: não fazem nada ao clicar
+    document.querySelectorAll('a[aria-disabled="true"]').forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); });
+    });
+  </script>
 </body>
 </html>

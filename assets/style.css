@@ -356,13 +356,13 @@ a { color: inherit; }
 .titulo-projetos .serif {
   font-family: var(--f-titulo);
   font-weight: 900;
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  font-size: clamp(2.2rem, min(6vw, 7.2vh), 4.6rem);
   letter-spacing: -0.06em;
   line-height: .8;
 }
 .titulo-projetos .script {
   font-family: var(--f-script);
-  font-size: clamp(3.4rem, 9vw, 6.8rem);
+  font-size: clamp(3rem, min(9vw, 10.5vh), 6.8rem);
   line-height: .7;
   margin-top: .12em;      /* afasta "Projetos" de "meus" e "Atuação" de "áreas de" */
   padding-bottom: .22em;   /* espaço para as "pernas" do j e do ç */
@@ -371,21 +371,23 @@ a { color: inherit; }
 .titulo-projetos .e-comercial {
   align-self: center;            /* no meio da altura do título */
   font-family: var(--f-script);
-  font-size: clamp(3.8rem, 9.5vw, 7.4rem);
+  font-size: clamp(3.3rem, min(9.5vw, 11.5vh), 7.4rem);
   line-height: 1;
   -webkit-text-stroke: .02em var(--texto);
 }
 .instrucao {
   position: relative;
   z-index: 2;
-  margin: 1.2rem 0 1.5rem;
+  margin: min(1.2rem, 1.6vh) 0 min(1.5rem, 2.2vh);
   font-family: var(--f-mao);
   font-size: clamp(.85rem, 1.3vw, 1.05rem);
   text-transform: uppercase;
   text-align: center;
 }
 .estrelas-areas {
-  width: min(100%, 1100px);
+  /* a largura também respeita a altura da tela, para o slide caber inteiro de uma vez */
+  width: min(100%, 1100px, calc((100vh - 18rem) * 2.4));
+  width: min(100%, 1100px, calc((100svh - 18rem) * 2.4));
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0 1rem;
@@ -393,7 +395,7 @@ a { color: inherit; }
   padding: 0;
   list-style: none;
 }
-.estrelas-areas li:nth-child(even) { margin-top: 6rem; }
+.estrelas-areas li:nth-child(even) { margin-top: min(6rem, 8vh); }
 .estrela-link {
   position: relative;
   display: grid;

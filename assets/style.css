@@ -365,9 +365,10 @@ a { color: inherit; }
   left: 50%;
   top: 47%;
   transform: translate(-50%, -50%);
-  width: 62cqi;
+  width: 62%;
   font-family: var(--f-mao);
-  font-size: 5.5cqi;
+  font-size: clamp(.55rem, 1vw, .8rem);  /* navegadores mais antigos */
+  font-size: 5.5cqi;                      /* acompanha o tamanho da estrela */
   line-height: 1.05;
   text-transform: uppercase;
   text-align: center;
@@ -579,6 +580,13 @@ a { color: inherit; }
   .tela { padding: 2.5rem 1rem; }
   .tela-abertura .site-header { margin: 0 -1rem; }
   .estrela { --t: var(--tm, 70px) !important; }
+}
+
+/* Navegadores sem suporte a cqi (ex.: Safari antigo no iPhone) */
+@supports not (font-size: 1cqi) {
+  @media (max-width: 900px) {
+    .estrela-link span { font-size: min(2.4vw, .8rem); }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

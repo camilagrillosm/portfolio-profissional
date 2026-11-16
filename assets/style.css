@@ -363,12 +363,12 @@ a { color: inherit; }
   /* Texto sempre no miolo da estrela, proporcional ao tamanho dela */
   position: absolute;
   left: 50%;
-  top: 47%;
+  top: 46%;
   transform: translate(-50%, -50%);
   width: 62%;
   font-family: var(--f-mao);
   font-size: clamp(.55rem, 1vw, .8rem);  /* navegadores mais antigos */
-  font-size: 5.5cqi;                      /* acompanha o tamanho da estrela */
+  font-size: 6cqi;                        /* acompanha o tamanho da estrela */
   line-height: 1.05;
   text-transform: uppercase;
   text-align: center;

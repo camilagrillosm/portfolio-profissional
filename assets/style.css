@@ -313,7 +313,7 @@ a { color: inherit; }
   font-family: var(--f-script);
   font-size: clamp(3.4rem, 9vw, 6.8rem);
   line-height: .7;
-  margin-top: -.1em;
+  margin-top: .12em;      /* afasta "Projetos" de "meus" e "Atuação" de "áreas de" */
   padding-bottom: .22em;   /* espaço para as "pernas" do j e do ç */
   -webkit-text-stroke: .02em var(--texto);
 }

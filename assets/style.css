@@ -131,6 +131,15 @@ a { color: inherit; }
 }
 .tela > :not(.estrela) { position: relative; z-index: 1; }
 
+/* Da 2ª seção em diante: altura pelo conteúdo, com menos espaço vazio entre os slides.
+   A frase e o contato mantêm uma altura mínima para as estrelas caberem sem encostar no texto. */
+.tela:not(.tela-abertura) {
+  min-height: 0;
+  padding-top: clamp(3rem, 8vh, 5rem);
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+}
+.tela.tela-frase, .tela.tela-contato { min-height: min(65vh, 600px); min-height: min(65svh, 600px); }
+
 /* ===== Slide 1: abertura ===== */
 .tela-abertura { padding-top: 0; justify-content: flex-start; }
 .tela-abertura .site-header { align-self: stretch; margin: 0 calc(-1 * clamp(1rem, 5vw, 4rem)); }
@@ -593,6 +602,13 @@ a { color: inherit; }
   .tela { padding: 2.5rem 1rem; }
   .tela-abertura .site-header { margin: 0 -1rem; }
   .estrela { --t: var(--tm, 70px) !important; }
+
+  /* Com menos espaço entre os slides, algumas estrelas ficariam atrás do texto no celular:
+     escondemos as do meio e levamos a grande do contato para o canto */
+  .tela-frase .estrela:nth-of-type(2),
+  .tela-contato .estrela:nth-of-type(2),
+  .tela-contato .estrela:nth-of-type(3) { display: none; }
+  .tela-contato .estrela:nth-of-type(1) { left: auto !important; right: -18px; top: 1.2rem !important; }
 }
 
 /* Navegadores sem suporte a cqi (ex.: Safari antigo no iPhone) */

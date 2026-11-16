@@ -192,7 +192,7 @@ a { color: inherit; }
 }
 .titulo-portfolio .p2 {
   display: block;
-  margin-top: -.18em;
+  margin-top: .02em;    /* um pouco de espaço entre "portfólio" e "Profissional" */
   font-family: var(--f-script);
   font-weight: 400;
   font-size: clamp(4.4rem, 13vw, 10.5rem);
@@ -482,7 +482,7 @@ a { color: inherit; }
   position: relative;
   z-index: 2;
   display: block;
-  margin-top: -.35em;
+  margin-top: -.18em;   /* um pouco de espaço abaixo de "Projetos em…" */
   padding-left: clamp(0rem, 8vw, 7rem);
   font-family: var(--f-titulo);
   font-weight: 700;
@@ -527,7 +527,7 @@ a { color: inherit; }
 @media (max-width: 760px) {
   .cards-projetos { grid-template-columns: repeat(2, minmax(0, 1fr)); }  /* celular: 2 por linha */
   .card-projeto { font-size: clamp(1.6rem, 7vw, 2.2rem); }
-  .area-titulo .nome { padding-left: 0; margin-top: -.15em; }
+  .area-titulo .nome { padding-left: 0; margin-top: -.02em; }
   .area-titulo .em { margin-right: .9em; }
 }
 @media (prefers-reduced-motion: reduce) { .card-projeto, .card-projeto:hover { transition: none; transform: none; } }

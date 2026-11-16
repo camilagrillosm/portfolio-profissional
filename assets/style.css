@@ -314,6 +314,7 @@ a { color: inherit; }
   font-size: clamp(3.4rem, 9vw, 6.8rem);
   line-height: .7;
   margin-top: -.1em;
+  padding-bottom: .22em;   /* espaço para as "pernas" do j e do ç */
   -webkit-text-stroke: .02em var(--texto);
 }
 .titulo-projetos .e-comercial {
@@ -323,7 +324,9 @@ a { color: inherit; }
   -webkit-text-stroke: .02em var(--texto);
 }
 .instrucao {
-  margin: 1.4rem 0 1rem;
+  position: relative;
+  z-index: 2;
+  margin: 1.2rem 0 1.5rem;
   font-family: var(--f-mao);
   font-size: clamp(.85rem, 1.3vw, 1.05rem);
   text-transform: uppercase;
@@ -345,6 +348,7 @@ a { color: inherit; }
   place-items: center;
   aspect-ratio: 1;
   text-decoration: none;
+  container-type: inline-size;
   transition: transform .25s;
 }
 .estrela-link svg { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -356,11 +360,14 @@ a { color: inherit; }
 }
 .estrela-link.verde polygon { fill: var(--lima-claro); stroke: var(--oliva-estrela); }
 .estrela-link span {
-  position: relative;
-  max-width: 9.5em;
-  margin-top: -6%;
+  /* Texto sempre no miolo da estrela, proporcional ao tamanho dela */
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  width: 62cqi;
   font-family: var(--f-mao);
-  font-size: clamp(.75rem, 1.35vw, 1.05rem);
+  font-size: 5.5cqi;
   line-height: 1.05;
   text-transform: uppercase;
   text-align: center;
@@ -558,7 +565,6 @@ a { color: inherit; }
   .titulo-projetos { row-gap: .6em; }
   .estrelas-areas { grid-template-columns: repeat(2, 1fr); max-width: 520px; }
   .estrelas-areas li:nth-child(even) { margin-top: 2.5rem; }
-  .estrela-link span { font-size: clamp(.75rem, 3.2vw, 1rem); }
 
   .contato-grade { grid-template-columns: 1fr; }
   .chamada { justify-self: start; }

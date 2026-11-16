@@ -564,7 +564,8 @@ a { color: inherit; }
   text-align: center;
   text-decoration: none;
   font-family: var(--f-texto);   /* IBM Plex Sans */
-  font-weight: 400;
+  font-weight: 700;              /* negrito */
+  font-style: italic;            /* itálico */
   font-size: clamp(1rem, 1.7vw, 1.4rem);
   line-height: 1.2;
   color: var(--rosa);

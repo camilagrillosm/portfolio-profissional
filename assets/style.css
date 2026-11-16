@@ -570,6 +570,17 @@ a { color: inherit; }
   transition: transform .25s, border-color .25s, background-color .25s;
 }
 .cards-projetos li:nth-child(even) .card-projeto { color: var(--oliva-estrela); }
+/* Títulos reais dos projetos: a letra acompanha o tamanho do card (e o assets/cards.js
+   diminui um pouco mais, se for preciso, para o título caber inteiro) */
+.card-projeto { container-type: inline-size; }
+.titulo-card {
+  display: block;
+  max-width: 100%;
+  font-size: 1.6rem;   /* navegadores mais antigos */
+  font-size: 14cqi;
+  line-height: 1.02;
+  overflow-wrap: break-word;
+}
 .card-projeto:hover, .card-projeto:focus-visible {
   transform: translateY(-6px);
   border-color: currentColor;

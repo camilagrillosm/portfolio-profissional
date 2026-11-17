@@ -261,6 +261,26 @@ a { color: inherit; }
   text-align: center;
 }
 
+/* ===== Página "em construção" (mesmo estilo do slide 2) ===== */
+.tela.tela-construcao { min-height: max(72vh, calc(4.3 * var(--u) + 2rem)); min-height: max(72svh, calc(4.3 * var(--u) + 2rem)); }
+.construcao { text-align: center; max-width: 100%; }
+.construcao h1 span { display: block; white-space: nowrap; }  /* duas linhas, como no slide */
+.construcao h1 {
+  margin: 0;
+  font-family: var(--f-titulo);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.4vw, 3.9rem);
+  letter-spacing: -0.06em;
+  line-height: .95;
+}
+.construcao .onda { width: min(92%, 32rem); margin: 1.1rem auto 1.3rem; }
+.construcao p {
+  margin: 0;
+  font-family: var(--f-mao);
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  line-height: 1.15;
+}
+
 /* ===== Slide 3: quem é camila? ===== */
 .tela-sobre { padding-bottom: 6rem; }
 .sobre-grade {

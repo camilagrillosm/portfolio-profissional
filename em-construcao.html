@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em construção | Camila Grillo</title>
+  <meta name="description" content="Esta página do portfólio de Camila Grillo ainda está sendo construída.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Gochi+Hand&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=Red+Hat+Display:ital,wght@1,400&family=Sacramento&display=swap">
+  <link rel="stylesheet" href="assets/style.css?v=14">
+</head>
+<body>
+  <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+  <header class="site-header">
+    <p class="aviso">Os conteúdos aqui presentes são de autoria de Camila Grillo Schiavetto Marques, e o plágio, assim como o uso indevido dos mesmos não é permitido.</p>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="sobre-mim.html">sobre mim</a></li>
+        <li><a href="projetos.html">projetos</a></li>
+      </ul>
+    </nav>
+    <div class="header-direita"></div>
+  </header>
+
+  <div class="pagina-topo">
+    <a class="voltar" href="index.html"><span aria-hidden="true">←</span> voltar ao início</a>
+    <a class="voltar secundario" href="projetos.html" id="voltar-anterior">voltar à página anterior</a>
+  </div>
+
+  <main>
+  <!-- ===== Página temporária: projeto ainda sem conteúdo =====
+       Usada pelos cards de projeto que ainda não têm PDF. Quando o PDF chegar,
+       basta trocar o link do card para o PDF; esta página continua aqui para os próximos. -->
+  <section class="tela tela-frase tela-construcao" aria-labelledby="titulo-construcao">
+    <div class="cacho esq" aria-hidden="true"><span class="estrela rosa c1"></span><span class="estrela rosa-claro c2"></span><span class="estrela lima c3"></span></div>
+    <div class="cacho dir" aria-hidden="true"><span class="estrela lima c1"></span><span class="estrela rosa-claro c2"></span><span class="estrela rosa c3"></span></div>
+    <div class="construcao">
+      <h1 id="titulo-construcao"><span>ops, essa página ainda</span> <span>está sendo construída!</span></h1>
+      <svg class="onda" viewBox="0 0 280 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2,7 Q12,1 22,7 T42,7 T62,7 T82,7 T102,7 T122,7 T142,7 T162,7 T182,7 T202,7 T222,7 T242,7 T262,7 T278,7" fill="none" stroke="#f66cc7" stroke-width="5" stroke-linecap="round"/></svg>
+      <p>peço perdão pelo transtorno,<br>volte novamente mais tarde!</p>
+    </div>
+  </section>
+  </main>
+
+  <script>
+    // "voltar à página anterior": volta para a área de onde a pessoa veio (ou para Projetos)
+    document.getElementById('voltar-anterior').addEventListener('click', function (e) {
+      if (document.referrer && history.length > 1) { e.preventDefault(); history.back(); }
+    });
+  </script>
+
+  <footer class="site-footer">
+    <p class="assinatura">Camila Grillo</p>
+    <ul>
+      <li><a href="mailto:camilagrillosmarques@gmail.com">camilagrillosmarques@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/camila-grillo-98189b28a" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="tel:+5511943006454">+55 11 94300-6454</a></li>
+    </ul>
+    <p class="aviso-rodape">Os conteúdos aqui presentes são de autoria de Camila Grillo Schiavetto Marques, e o plágio, assim como o uso indevido dos mesmos não é permitido.</p>
+  </footer>
+
+</body>
+</html>
